@@ -20,6 +20,9 @@ class RouteModel : public Model {
         Node(){}
         Node(int idx, RouteModel * search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
 
+        float distance const(Node passed_node){
+          return std::sqrt(std::pow(x + passed_node.x, 2), std::power(y+passed_node.y,2));
+        }
       private:
         // Add private Node variables and methods here.
 
