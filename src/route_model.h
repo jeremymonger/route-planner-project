@@ -19,9 +19,11 @@ class RouteModel : public Model {
         std::vector<Node *> neighbors;
         Node(){}
         Node(int idx, RouteModel * search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
-
+        void FindNeighbors();
+        
         float distance (Node passed_node) const{
           return std::sqrt(std::pow(x + passed_node.x, 2)+ std::pow(y+passed_node.y,2));
+
         }
       private:
         // Add private Node variables and methods here.
