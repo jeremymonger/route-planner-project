@@ -27,6 +27,7 @@ class RouteModel : public Model {
         // Add private Node variables and methods here.
 
         int index;
+        Node* FindNeighbor(std::vector<int> node_indices);
         RouteModel * parent_model = nullptr;
     };
 
@@ -41,4 +42,5 @@ class RouteModel : public Model {
     std::vector<Node> m_Nodes;
     std::unordered_map<int, std::vector<const Model::Road*>> node_to_road;
     void CreateNodeToRoadHashmap();
+
 };
