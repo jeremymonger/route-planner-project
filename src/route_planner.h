@@ -13,6 +13,7 @@ class RoutePlanner {
     float GetDistance(){
       return distance;
     }
+    void AStarSearch();
   private:
     // Add private variables or methods declarations here.
     RouteModel &m_Model;
